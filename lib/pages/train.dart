@@ -1,8 +1,6 @@
-import 'package:app/buttons/actual_button.dart';
-import 'package:app/buttons/popupbutton.dart';
-import 'package:app/buttons/star.dart';
+import 'package:app/static_components//actual_button.dart';
+import 'package:app/static_components/appbar.dart';
 import 'package:flutter/material.dart';
-
 
 class Train extends StatelessWidget {
   const Train({super.key});
@@ -11,15 +9,9 @@ class Train extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        toolbarHeight: 100,
-        title: const Text("Тренировки",
-            style: TextStyle(
-              fontSize: 40,)),
-        leading: NewButton(),
-        actions: [StarButton()],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: OrdinaryAppBar(titleOfPage: "Тренировки"),
       ),
       body: Center(
         child: Column(

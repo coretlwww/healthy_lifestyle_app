@@ -1,5 +1,5 @@
-import 'package:app/buttons/popupbutton.dart';
-import 'package:app/buttons/star.dart';
+
+import 'package:app/static_components/appbar.dart';
 import 'package:flutter/material.dart';
 
 class Favorites extends StatelessWidget {
@@ -8,15 +8,9 @@ class Favorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        toolbarHeight: 100,
-        title: const Text("Избранное",
-            style: TextStyle(
-              fontSize: 40,),),
-        leading: NewButton(),
-        actions: [StarButton()],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: OrdinaryAppBar(titleOfPage: "Избранное"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

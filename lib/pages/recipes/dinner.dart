@@ -1,6 +1,6 @@
-import 'package:app/buttons/actual_button.dart';
-import 'package:app/buttons/popupbutton.dart';
-import 'package:app/buttons/star.dart';
+import 'package:app/static_components/actual_button.dart';
+import 'package:app/static_components/popupbutton.dart';
+import 'package:app/static_components/star.dart';
 import 'package:flutter/material.dart';
 
 class Dinner extends StatelessWidget {

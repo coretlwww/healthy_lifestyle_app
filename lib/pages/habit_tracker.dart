@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app/components_ht//util/habit_util.dart';
 
-import '../buttons/popupbutton.dart';
-import '../buttons/star.dart';
+import '../static_components//popupbutton.dart';
+import '../static_components//star.dart';
 
 
 class HabitTracker extends StatefulWidget {

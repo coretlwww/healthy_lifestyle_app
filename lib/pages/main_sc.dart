@@ -1,6 +1,5 @@
+import 'package:app/static_components/appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:app/buttons/popupbutton.dart';
-import 'package:app/buttons/star.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -14,17 +13,9 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        toolbarHeight: 100,
-        title: const Text("Главная",
-            style: TextStyle(
-              fontFamily: 'Open Sans',
-              fontSize: 40,
-            )),
-        leading: NewButton(),
-        actions: [StarButton(),],
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: OrdinaryAppBar(titleOfPage: "Главная"),
       ),
       body:
         Column(children: <Widget> [
