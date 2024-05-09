@@ -1,13 +1,13 @@
-import 'package:app/components/habit_tile.dart';
-import 'package:app/components/heat_map.dart';
+import 'package:app/components_ht//habit_tile.dart';
+import 'package:app/components_ht//heat_map.dart';
 import 'package:app/database/habit_db.dart';
-import 'package:app/models/habits.dart';
+import 'package:app/database/models/habits.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:app/util/habit_util.dart';
+import 'package:app/components_ht//util/habit_util.dart';
 
-import '../popupbutton.dart';
-import '../star.dart';
+import '../buttons/popupbutton.dart';
+import '../buttons/star.dart';
 
 
 class HabitTracker extends StatefulWidget {

@@ -1,3 +1,6 @@
+import 'package:app/buttons/actual_button.dart';
+import 'package:app/buttons/popupbutton.dart';
+import 'package:app/buttons/star.dart';
 import 'package:flutter/material.dart';
 
 class Snack extends StatelessWidget {
@@ -15,118 +18,28 @@ class Snack extends StatelessWidget {
             style: TextStyle(
               fontSize: 40,
             )),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.account_circle_outlined,
-                color: Colors.black,
-                size: 57,
-              ))
-        ],
+        leading: NewButton(),
+        actions: [StarButton()],
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/salad');
-                  },
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
+      body: ListView(
+        children: [
+          Center(
+            child: Column(
+              children: <Widget>[
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "...", pathImage: 'images/to.jpg', path: '/salad'),
+              ],
             ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

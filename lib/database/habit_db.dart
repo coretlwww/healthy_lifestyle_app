@@ -1,5 +1,5 @@
-import 'package:app/models/app_settings.dart';
-import 'package:app/models/habits.dart';
+import 'package:app/database/models/app_settings.dart';
+import 'package:app/database/models/habits.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';

@@ -1,4 +1,7 @@
+import 'package:app/buttons/actual_button.dart';
 import 'package:flutter/material.dart';
+import 'package:app/buttons/popupbutton.dart';
+import 'package:app/buttons/star.dart';
 
 class Lunch extends StatelessWidget {
   const Lunch({super.key});
@@ -15,118 +18,28 @@ class Lunch extends StatelessWidget {
             style: TextStyle(
               fontSize: 40,
             )),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.account_circle_outlined,
-                color: Colors.black,
-                size: 57,
-              ))
-        ],
+        leading: NewButton(),
+        actions: [StarButton()],
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/salad');
-                  },
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
+      body: ListView(
+        children: [
+          Center(
+            child: Column(
+              children: <Widget>[
+                ActualButtons(name: "Индейка с брокколи в сливочном соусе", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Курица тушеная с овощами", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Паста с курицей и грибами", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Рыба с овощами", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Рыбное суфле", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Говядина тушеная с овощами", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Паста Болоньезе", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Фунчоза с говядиной и овощами", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Рагу с индейкой и стручковой фасолью", pathImage: 'images/to.jpg', path: '/salad'),
+                ActualButtons(name: "Плов из курицы", pathImage: 'images/to.jpg', path: '/salad'),
+              ],
             ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-            Container(
-              width: 500,
-              height: 90,
-              padding: const EdgeInsets.only(top: 10),
-              child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Image.asset('images/to.jpg', width: 75, height: 75,),
-                  label: Container(
-                    padding: const EdgeInsets.only(right: 120, left: 20),
-                    child: const Text("Рецепт",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                  ),
-                  style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white))),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

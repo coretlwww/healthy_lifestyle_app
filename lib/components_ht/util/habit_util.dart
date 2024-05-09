@@ -1,4 +1,4 @@
-import "package:app/models/habits.dart";
+import "package:app/database/models/habits.dart";
 
 bool isHabitCompletedToday(List<DateTime> completedDays){
   final today = DateTime.now();

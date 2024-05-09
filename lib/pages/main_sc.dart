@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:app/popupbutton.dart';
-import 'package:app/star.dart';
+import 'package:app/buttons/popupbutton.dart';
+import 'package:app/buttons/star.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});

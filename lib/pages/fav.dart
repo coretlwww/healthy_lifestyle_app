@@ -1,5 +1,5 @@
-import 'package:app/popupbutton.dart';
-import 'package:app/star.dart';
+import 'package:app/buttons/popupbutton.dart';
+import 'package:app/buttons/star.dart';
 import 'package:flutter/material.dart';
 
 class Favorites extends StatelessWidget {
