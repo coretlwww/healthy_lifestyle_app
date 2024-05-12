@@ -12,9 +12,6 @@ class Favorites extends StatelessWidget {
         preferredSize: Size.fromHeight(100),
         child: OrdinaryAppBar(titleOfPage: "Избранное"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-      ),
     );
   }
 }

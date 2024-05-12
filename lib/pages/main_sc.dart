@@ -99,29 +99,6 @@ class _MainScreenState extends State<MainScreen> {
             ],
           )
         ]),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
-        onPressed: () {
-          showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  content: const Text("Дисклеймер!"),
-                  actions: [
-                    IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: const Icon(Icons.close_rounded))
-                  ],
-                );
-              });
-        },
-        child: const Icon(
-          Icons.warning_rounded,
-          color: Colors.black,
-        ),
-      ),
     );
   }
 }

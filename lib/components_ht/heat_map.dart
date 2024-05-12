@@ -21,15 +21,15 @@ class HeatMap extends StatelessWidget {
         showColorTip: false,
         size: 30,
         colorsets: {
-          1: Colors.green.shade100,
-          2: Colors.green.shade200,
-          3: Colors.green.shade300,
-          4: Colors.green.shade400,
-          5: Colors.green.shade500,
-          6: Colors.green.shade600,
-          7: Colors.green.shade700,
-          8: Colors.green.shade800,
-          9: Colors.green.shade900,
+          1: Colors.deepPurple.shade100,
+          2: Colors.deepPurple.shade200,
+          3: Colors.deepPurple.shade300,
+          4: Colors.deepPurple.shade400,
+          5: Colors.deepPurple.shade500,
+          6: Colors.deepPurple.shade600,
+          7: Colors.deepPurple.shade700,
+          8: Colors.deepPurple.shade800,
+          9: Colors.deepPurple.shade900,
         });
   }
 }

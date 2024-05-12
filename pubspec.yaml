@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  equatable: ^2.0.0
   flutter:
     sdk: flutter
 
@@ -42,6 +43,7 @@ dependencies:
   flutter_slidable: ^3.1.0
   flutter_heatmap_calendar: ^1.0.5
   popover: ^0.2.8+2
+  flutter_bloc: ^8.1.5
 
 dev_dependencies:
   flutter_test:

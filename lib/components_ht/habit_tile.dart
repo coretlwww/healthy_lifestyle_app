@@ -48,17 +48,16 @@ class HabitTile extends StatelessWidget {
           },
           child: Container(
             decoration: BoxDecoration(
-              color: isCompleted ? Colors.green : Colors.white,
+              color: isCompleted ? Colors.deepPurple.shade300 : Colors.white,
               borderRadius: BorderRadius.circular(8),
             ),
             padding: const EdgeInsets.all(12),
             child: ListTile(
               title: Text(text,
                 style: TextStyle(
-                    color: isCompleted ? Colors.white : Colors.black,
-                    fontFamily: 'CloudWorld'),),
+                    color: isCompleted ? Colors.white : Colors.black,),),
               leading: Checkbox(
-                activeColor: Colors.green,
+                activeColor: Colors.deepPurple.shade300,
                 value: isCompleted,
                 onChanged: onChanged,
               ),

@@ -1,7 +1,9 @@
 import 'package:app/database/habit_db.dart';
 import 'package:app/pages//fav.dart';
+import 'package:app/pages/food_categories/choose_lunch.dart';
 import 'package:app/pages/habit_tracker.dart';
 import 'package:app/pages/recipes/snack.dart';
+import 'package:app/pages/food_categories/choose_breakfast.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages//main_sc.dart';
 import 'package:app/pages//recipes.dart';
@@ -20,9 +22,11 @@ void main() async{
 
   runApp(
     MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (context) => HabitDB()),
-        ],
+      providers: [
+        ChangeNotifierProvider(create: (context) => HabitDB()),
+        ChangeNotifierProvider(create: (context) => ChooseBreakfast()),
+        ChangeNotifierProvider(create: (context) => ChooseLunch())
+      ],
       //navigation
       child: MaterialApp(
         initialRoute: '/',

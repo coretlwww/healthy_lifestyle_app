@@ -1,45 +1,70 @@
+import 'package:app/pages/food_categories/decoration.dart';
+import 'package:app/static_components/appbar.dart';
+import 'package:app/pages/food_categories/categories_recipes.dart';
+import 'package:app/pages/food_categories/choose_breakfast.dart';
 import 'package:flutter/material.dart';
-import 'package:app/static_components/popupbutton.dart';
-import 'package:app/static_components/star.dart';
-import 'package:app/static_components/actual_button.dart';
+import 'package:provider/provider.dart';
+
 
 class Breakfast extends StatelessWidget {
   const Breakfast({super.key});
 
+  //name of each category in the tab bar
+  List<Tab> _buildCategoryTabs(){
+    return FoodCategory.values.map((category) {
+      return Tab(
+        text: category.categoryName,
+      );
+    }).toList();
+  }
+
+  List<Food> _filterMenuByCategory(FoodCategory category, List<Food> fullMenu) {
+    return fullMenu.where((food) => food.category == category).toList();
+  }
+
+  List<Widget> getFood(List<Food> fullMenu) {
+    return FoodCategory.values.map((category) {
+      List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
+      
+      return ListView.builder(
+          itemCount: categoryMenu.length,
+          padding: EdgeInsets.zero,
+          itemBuilder: (context, index) {
+            final food = categoryMenu[index];
+            return FoodDecor(
+                food: food);
+          });
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        centerTitle: true,
+    return DefaultTabController(
+      length: 7,
+      child: Scaffold(
         backgroundColor: Colors.white,
-        toolbarHeight: 100,
-        title: const Text("Завтрак",
-            style: TextStyle(
-              fontSize: 40,
-            )),
-        leading: NewButton(),
-        actions: [StarButton()],
-      ),
-      body: ListView(
-        children: [
-          Center(
-            child: Column(
-              children: <Widget>[
-                ActualButtons(name: "Пышные сырники", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Яичные блинчики с ветчиной и сыром", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Оладьи кабачковые", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Кекс с орехами и бананами", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Морковные кексы с яблоками и орехами", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Капустные оладьи на кефире", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Запеканка творожная", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Блины с творогом и клубникой", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Запеканка из тыквы с морковью", pathImage: 'images/to.jpg', path: '/salad'),
-                ActualButtons(name: "Манник на кефире", pathImage: 'images/to.jpg', path: '/salad'),
-              ],
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(100),
+          child: OrdinaryAppBar(titleOfPage: "Завтрак"),
+        ),
+        body: Column(
+          children: [
+            Container(
+              height: 80,
+              child: TabBar(
+                  isScrollable: true,
+                  tabs: _buildCategoryTabs()
+              ),
             ),
-          ),
-        ],
+            Expanded(
+              child: Consumer<ChooseBreakfast>(
+                builder: (context, restaurant, child) => TabBarView(
+                  children: getFood(restaurant.menuBreakfast)
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
