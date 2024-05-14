@@ -1,4 +1,3 @@
-
 import 'package:app/static_components/appbar.dart';
 import 'package:flutter/material.dart';
 

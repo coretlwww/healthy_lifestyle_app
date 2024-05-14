@@ -19,22 +19,31 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body:
         Column(children: <Widget> [
-          Container(
-            padding: const EdgeInsets.only(right: 130, bottom: 5),
-            child: const Text("Добро пожаловать!",
-                style: TextStyle(
-                  fontFamily: 'Open Sans',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                child: const Text("Добро пожаловать!",
+                    style: TextStyle(
+                      fontFamily: 'Open Sans',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                    )),
+              ),
+            ],
           ),
-          Container(
-            padding: const EdgeInsets.only(right: 100, left: 10),
-            child: const Text("Хорошего дня, пользователь!",
-                style: TextStyle(
-                  fontFamily: 'Open Sans',
-                  fontSize: 20,
-                )),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(right: 200),
+                child: const Text("Хорошего дня!",
+                    style: TextStyle(
+                      fontFamily: 'Open Sans',
+                      fontSize: 20,
+                    )),
+              ),
+            ],
           ),
             Column(
               children: [
@@ -49,6 +58,12 @@ class _MainScreenState extends State<MainScreen> {
                       Navigator.pushNamed(context, '/recipe');
                     },
                 ),
+                Container(
+                    child:
+                    const Text("Рецепты", style: TextStyle(
+                      fontSize: 18,
+                    ),)
+                ),
                 IconButton(
                   icon: Container(
                     padding: const EdgeInsets.only(top: 10),
@@ -59,6 +74,12 @@ class _MainScreenState extends State<MainScreen> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/train');
                   },
+                ),
+                Container(
+                    child:
+                    const Text("Тренировки", style: TextStyle(
+                      fontSize: 18,
+                    ),)
                 ),
                 IconButton(
                   icon: Container(
@@ -71,33 +92,14 @@ class _MainScreenState extends State<MainScreen> {
                     Navigator.pushNamed(context, '/habitTracker');
                   },
                 ),
+                Container(
+                    child:
+                    const Text("Трекер привычек", style: TextStyle(
+                      fontSize: 18,
+                    ),)
+                )
               ],
             ),
-          Column(
-            children: [
-              Container(
-                  padding: const EdgeInsets.only(left: 45),
-                  child:
-                  const Text("Рецепты", style: TextStyle(
-                    fontSize: 18,
-                  ),)
-              ),
-              Container(
-                  padding: const EdgeInsets.only(left: 80),
-                  child:
-                  const Text("Тренировки", style: TextStyle(
-                    fontSize: 18,
-                    ),)
-              ),
-              Container(
-                  padding: const EdgeInsets.only(left: 80),
-                  child:
-                  const Text("Трекер привычек", style: TextStyle(
-                    fontSize: 18,
-                  ),)
-              )
-            ],
-          )
         ]),
     );
   }

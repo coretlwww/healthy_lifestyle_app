@@ -25,7 +25,6 @@ class Breakfast extends StatelessWidget {
   List<Widget> getFood(List<Food> fullMenu) {
     return FoodCategory.values.map((category) {
       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
-      
       return ListView.builder(
           itemCount: categoryMenu.length,
           padding: EdgeInsets.zero,
