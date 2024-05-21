@@ -1,6 +1,6 @@
 import 'package:app/api/firebase_api.dart';
 import 'package:app/database/habit_db.dart';
-import 'package:app/pages//fav.dart';
+import 'package:app/pages/fav.dart';
 import 'package:app/pages/food_categories/choose_lunch.dart';
 import 'package:app/pages/habit_tracker.dart';
 import 'package:app/pages/recipes/snack.dart';
@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:app/pages//main_sc.dart';
 import 'package:app/pages//recipes.dart';
 import 'package:app/pages//train.dart';
-import 'package:app/pages/recipes//salad.dart';
 import 'package:app/pages/recipes//breakfast.dart';
 import 'package:app/pages/recipes//lunch.dart';
 import 'package:app/pages/recipes//dinner.dart';
@@ -33,7 +32,7 @@ void main() async{
       providers: [
         ChangeNotifierProvider(create: (context) => HabitDB()),
         ChangeNotifierProvider(create: (context) => ChooseBreakfast()),
-        ChangeNotifierProvider(create: (context) => ChooseLunch())
+        //ChangeNotifierProvider(create: (context) => ChooseLunch()),
       ],
       //navigation
       child: MaterialApp(
@@ -43,12 +42,11 @@ void main() async{
           '/': (context) => const MainScreen(),
           '/recipe': (context) => const Recipe(),
           '/train': (context) => const Train(),
-          '/salad': (context) => const Salad(),
           '/breakfast': (context) => const Breakfast(),
-          '/lunch': (context) => const Lunch(),
+          //'/lunch': (context) => const Lunch(),
           '/dinner': (context) => const Dinner(),
           '/snack': (context) => const Snack(),
-          '/fav': (context) => const Favorites(),
+          '/fav': (context) => const FavoritePage(),
           '/habitTracker': (context) => const HabitTracker(),
         },
       ),

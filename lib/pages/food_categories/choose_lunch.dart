@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'categories_recipes.dart';
 
+/*
 class ChooseLunch extends ChangeNotifier{
   final List<Food> _menuLunch = [
     //all
@@ -70,5 +71,5 @@ class ChooseLunch extends ChangeNotifier{
   ];
 
   List<Food> get menuLunch => _menuLunch;
-
 }
+*/

@@ -5,7 +5,7 @@ import 'package:app/static_components/appbar.dart';
 import 'package:app/pages/food_categories/categories_recipes.dart';
 import 'package:provider/provider.dart';
 
-
+/*
 class Lunch extends StatelessWidget {
   const Lunch({super.key});
 
@@ -69,3 +69,4 @@ class Lunch extends StatelessWidget {
     );
   }
 }
+*/

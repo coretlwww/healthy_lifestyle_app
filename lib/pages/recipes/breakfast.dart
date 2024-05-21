@@ -1,3 +1,4 @@
+import 'package:app/static_components/make_pages.dart';
 import 'package:app/pages/food_categories/decoration.dart';
 import 'package:app/static_components/appbar.dart';
 import 'package:app/pages/food_categories/categories_recipes.dart';
@@ -31,9 +32,19 @@ class Breakfast extends StatelessWidget {
           itemBuilder: (context, index) {
             final food = categoryMenu[index];
             return FoodDecor(
-                food: food);
+                food: food,
+                onTap: () => navigateToRecipe(context, index),);
           });
     }).toList();
+  }
+
+  void navigateToRecipe(BuildContext context, int index) {
+    final shop = context.read<ChooseBreakfast>();
+    final foodMenu = shop.menuBreakfast;
+
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) => MakePages(food: foodMenu[index]),
+    ));
   }
 
   @override

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 class FoodDecor extends StatelessWidget {
   final Food food;
-  //final void Function()? onTap;
+  final void Function()? onTap;
 
   const FoodDecor({
     super.key,
     required this.food,
-    //required this.onTap,
+    required this.onTap,
   });
 
   @override
@@ -16,7 +16,7 @@ class FoodDecor extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: () => Navigator.pushNamed(context, food.pagePath),
+          onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Container(

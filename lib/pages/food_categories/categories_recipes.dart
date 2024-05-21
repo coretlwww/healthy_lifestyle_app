@@ -2,13 +2,11 @@ class Food {
   final String name;
   final String imagePath;
   final FoodCategory category;
-  final String pagePath;
 
   Food({
     required this.name,
     required this.imagePath,
     required this.category,
-    required this.pagePath,
   });
 }
 
