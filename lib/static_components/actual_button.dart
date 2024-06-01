@@ -2,41 +2,35 @@ import 'package:flutter/material.dart';
 
 class ActualButtons extends StatelessWidget {
   final String name;
-  final String pathImage;
-  final String path;
+  final String pagePath;
+  final String imagePath;
   const ActualButtons({
     super.key,
     required this.name,
-    required this.pathImage,
-    required this.path,
+    required this.pagePath,
+    required this.imagePath,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 500,
-      height: 90,
-      padding: const EdgeInsets.only(top: 10, bottom: 5),
-      child: ElevatedButton.icon(
-        onPressed: () {
-          Navigator.pushNamed(context, path);
-        },
-        icon: Image.asset(
-          pathImage,
-          width: 75,
-          height: 75,
-        ),
-        label: Text(
-          name,
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.black,
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, pagePath),
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Container(
+          color: Colors.grey.shade50,
+          child: Row(
+            children: [
+              Image.asset(imagePath, width: 75, height: 75,),
+              Expanded(child: Column(
+                children: [
+                  Text(name)
+                ],
+              ))
+            ],
           ),
-        ),
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
         ),
       ),
     );
   }
-  }
+}

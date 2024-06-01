@@ -4,15 +4,15 @@ import 'package:app/static_components/appbar_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class MakePages extends StatefulWidget {
+class MakePagesBreakfast extends StatefulWidget {
   final Food food;
-  const MakePages({super.key, required this.food});
+  const MakePagesBreakfast({super.key, required this.food});
 
   @override
-  State<MakePages> createState() => _MakePagesState();
+  State<MakePagesBreakfast> createState() => _MakePagesState();
 }
 
-class _MakePagesState extends State<MakePages> {
+class _MakePagesState extends State<MakePagesBreakfast> {
   bool isSelected = false;
 
   void initState() {
@@ -49,17 +49,26 @@ class _MakePagesState extends State<MakePages> {
         preferredSize: Size.fromHeight(100),
         child: AppBarRecipes(titleOfPage: widget.food.name),
       ),
-      body: GestureDetector(
-          onTap: () {
-            if (isSelected) {
-              removeFromCart();
-            } else {
-              addToCart();
-            }
-          },
-          child: isSelected
-              ? Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
-              : Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              GestureDetector(
+                  onTap: () {
+                    if (isSelected) {
+                      removeFromCart();
+                    } else {
+                      addToCart();
+                    }
+                  },
+                  child: isSelected
+                      ? Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
+                      : Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
+              ),
+            ],
+          ),
+          Text(widget.food.description),
+        ],
       ));
   }
 }

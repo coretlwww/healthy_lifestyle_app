@@ -1,11 +1,13 @@
 import 'package:app/pages/food_categories/choose_lunch.dart';
+import 'package:app/pages/food_categories/pages_recipes/make_pages_breakfast.dart';
+import 'package:app/pages/food_categories/pages_recipes/make_pages_lunch.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/food_categories/decoration.dart';
 import 'package:app/static_components/appbar.dart';
 import 'package:app/pages/food_categories/categories_recipes.dart';
 import 'package:provider/provider.dart';
 
-/*
+
 class Lunch extends StatelessWidget {
   const Lunch({super.key});
 
@@ -25,16 +27,22 @@ class Lunch extends StatelessWidget {
   List<Widget> getFood(List<Food> fullMenu) {
     return FoodCategory.values.map((category) {
       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
-
       return ListView.builder(
           itemCount: categoryMenu.length,
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
             final food = categoryMenu[index];
             return FoodDecor(
-                food: food);
+              food: food,
+              onTap: () => navigateToRecipe(context, food),);
           });
     }).toList();
+  }
+
+  void navigateToRecipe(BuildContext context, Food food) {
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) => MakePagesLunch(food: food),
+    ));
   }
 
   @override
@@ -69,4 +77,3 @@ class Lunch extends StatelessWidget {
     );
   }
 }
-*/

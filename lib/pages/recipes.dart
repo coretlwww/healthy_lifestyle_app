@@ -8,7 +8,7 @@ class Recipe extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100),
@@ -18,10 +18,10 @@ class Recipe extends StatelessWidget {
           Center(
             child: Column(
               children: <Widget>[
-                ActualButtons(name: "Завтрак", pathImage: 'images/to.jpg', path: '/breakfast'),
-                ActualButtons(name: "Обед", pathImage: 'images/to.jpg', path: '/lunch'),
-                ActualButtons(name: "Перекус", pathImage: 'images/to.jpg', path: '/snack'),
-                ActualButtons(name: "Ужин", pathImage: 'images/to.jpg', path: '/dinner'),
+                ActualButtons(name: "Завтрак", pagePath: '/breakfast', imagePath: 'images/to.jpg'),
+                ActualButtons(name: "Обед", pagePath: '/lunch', imagePath: 'images/to.jpg'),
+                ActualButtons(name: "Перекус", pagePath: '/snack', imagePath: 'images/to.jpg'),
+                ActualButtons(name: "Ужин", pagePath: '/dinner', imagePath: 'images/to.jpg'),
               ],
             ),
           ),

@@ -7,7 +7,7 @@ class Train extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100),
@@ -16,8 +16,7 @@ class Train extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            ActualButtons(name: "Пресс", pathImage: 'images/to.jpg', path: '/salad'),
-            ActualButtons(name: "Разминка", pathImage: 'images/to.jpg', path: '/salad'),
+            ActualButtons(pagePath: '', imagePath: 'images/to.jpg', name: "Тренировки"),
           ],
         ),
       ),
