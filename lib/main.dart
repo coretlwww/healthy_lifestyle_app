@@ -6,6 +6,7 @@ import 'package:app/pages/food_categories/choose_dinner.dart';
 import 'package:app/pages/food_categories/choose_lunch.dart';
 import 'package:app/pages/food_categories/choose_snack.dart';
 import 'package:app/pages/habit_tracker.dart';
+import 'package:app/pages/onboarding_screen.dart';
 import 'package:app/pages/recipes/snack.dart';
 import 'package:app/pages/food_categories/choose_breakfast.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -44,7 +45,7 @@ void main() async{
         navigatorKey: navigatorKey,
         initialRoute: '/',
         routes: {
-          '/': (context) => const MainScreen(),
+          '/main': (context) => const MainScreen(),
           '/recipe': (context) => const Recipe(),
           '/train': (context) => const Train(),
           '/breakfast': (context) => const Breakfast(),
@@ -54,6 +55,7 @@ void main() async{
           '/fav': (context) => const MainFavorites(),
           '/favRecipe': (context) => const FavoritePageRecipes(),
           '/habitTracker': (context) => const HabitTracker(),
+          '/': (context) => const OnBoardingScreen(),
         },
       ),
     ),

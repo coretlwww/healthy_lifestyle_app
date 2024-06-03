@@ -32,7 +32,7 @@ class MenuItems extends StatelessWidget {
           height: 50,
           child: TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/main');
             },
             child: Text("Главная"),
           ),

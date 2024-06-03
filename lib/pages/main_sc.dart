@@ -1,5 +1,7 @@
 import 'package:app/static_components/appbar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -13,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: PreferredSize(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(100),
         child: OrdinaryAppBar(titleOfPage: "Главная"),
       ),
@@ -46,58 +48,41 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                IconButton(
-                  icon: Container(
-                    padding: const EdgeInsets.only(top: 10),
-                    width: 150,
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/recipe'),
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 15),
+                      width: 150,
                       height: 150,
-                      child: Image.asset('images/to.jpg')),
-                    iconSize: 50,
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/recipe');
-                    },
+                      child: Image.asset('images/to.jpg',)),
                 ),
-                Container(
-                    child:
-                    const Text("Рецепты", style: TextStyle(
-                      fontSize: 18,
-                    ),)
-                ),
-                IconButton(
-                  icon: Container(
-                    padding: const EdgeInsets.only(top: 10),
+                const Text("Рецепты", style: TextStyle(
+                  fontSize: 18,
+                ),),
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/train'),
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 15),
                       width: 150,
                       height: 150,
                       child: Image.asset('images/to.jpg')),
-                  iconSize: 50,
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/train');
-                  },
                 ),
-                Container(
-                    child:
-                    const Text("Тренировки", style: TextStyle(
-                      fontSize: 18,
-                    ),)
-                ),
-                IconButton(
-                  icon: Container(
-                      padding: const EdgeInsets.only(top: 10),
+                const Text("Тренировки", style: TextStyle(
+                  fontSize: 18,
+                ),),
+                GestureDetector(
+                  onTap: () => Navigator.pushNamed(context, '/habitTracker'),
+                  child: Container(
+                      padding: const EdgeInsets.only(top: 15),
                       width: 150,
                       height: 150,
                       child: Image.asset('images/to.jpg')),
-                  iconSize: 50,
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/habitTracker');
-                  },
                 ),
-                Container(
-                    child:
-                    const Text("Трекер привычек", style: TextStyle(
-                      fontSize: 18,
-                    ),)
-                )
+                const Text("Трекер привычек", style: TextStyle(
+                  fontSize: 18,
+                ),)
               ],
             ),
         ]),
