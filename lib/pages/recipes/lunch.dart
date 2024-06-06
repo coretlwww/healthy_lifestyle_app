@@ -1,5 +1,4 @@
 import 'package:app/pages/food_categories/choose_lunch.dart';
-import 'package:app/pages/food_categories/pages_recipes/make_pages_breakfast.dart';
 import 'package:app/pages/food_categories/pages_recipes/make_pages_lunch.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages/food_categories/decoration.dart';
@@ -51,13 +50,13 @@ class Lunch extends StatelessWidget {
       length: 7,
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: PreferredSize(
+        appBar: const PreferredSize(
           preferredSize: Size.fromHeight(100),
           child: OrdinaryAppBar(titleOfPage: "Обед"),
         ),
         body: Column(
           children: [
-            Container(
+            SizedBox(
               height: 80,
               child: TabBar(
                   isScrollable: true,

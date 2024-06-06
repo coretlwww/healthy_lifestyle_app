@@ -9,7 +9,7 @@ class NewButton extends StatelessWidget {
     return GestureDetector(
       onTap: () => showPopover(
         context: context,
-        bodyBuilder: (context) => MenuItems(),
+        bodyBuilder: (context) => const MenuItems(),
         width: 200,
         height: 210,
         backgroundColor: Colors.deepPurple.shade100,
@@ -28,46 +28,46 @@ class MenuItems extends StatelessWidget {
       children: [
         //1st
         Container(
-          padding: EdgeInsets.only(top:10),
+          padding: const EdgeInsets.only(top:10),
           height: 50,
           child: TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/main');
             },
-            child: Text("Главная"),
+            child: const Text("Главная"),
           ),
         ),
         //2nd
         Container(
-          padding: EdgeInsets.only(top:10),
+          padding: const EdgeInsets.only(top:10),
           height: 50,
           child: TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/recipe');
             },
-            child: Text("Рецепты"),
+            child: const Text("Рецепты"),
           ),
         ),
         //3rd
         Container(
-          padding: EdgeInsets.only(top:10),
+          padding: const EdgeInsets.only(top:10),
           height: 50,
           child: TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/train');
             },
-            child: Text("Тренировки"),
+            child: const Text("Тренировки"),
           ),
         ),
         //4th
         Container(
-          padding: EdgeInsets.only(top:10),
+          padding: const EdgeInsets.only(top:10),
           height: 50,
           child: TextButton(
             onPressed: () {
               Navigator.pushNamed(context, '/habitTracker');
             },
-            child: Text("Трекер привычек"),
+            child: const Text("Трекер привычек"),
           ),
         ),
       ],

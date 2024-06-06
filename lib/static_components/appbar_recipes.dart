@@ -18,8 +18,8 @@ class AppBarRecipes extends StatelessWidget {
       title: Text(titleOfPage,
           style: const TextStyle(
             fontSize: 20,)),
-      leading: NewButton(),
-      actions: [StarButton()],
+      leading: const NewButton(),
+      actions: const [StarButton()],
     );
   }
 }

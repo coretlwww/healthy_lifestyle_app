@@ -3,12 +3,16 @@ class Food {
   final String imagePath;
   final FoodCategory category;
   final String description;
+  final String description2;
+  final String description3;
 
   Food({
     required this.name,
     required this.imagePath,
     required this.category,
     required this.description,
+    required this.description2,
+    required this.description3,
   });
 }
 

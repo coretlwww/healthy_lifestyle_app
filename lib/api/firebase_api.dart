@@ -16,7 +16,6 @@ class FirebaseApi{
 
     //print the token (normally you send tis to your server)
     print('Token: $FCMToken');
-
     initPushNotifications();
   }
 

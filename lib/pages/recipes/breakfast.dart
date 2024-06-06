@@ -50,13 +50,13 @@ class Breakfast extends StatelessWidget {
       length: 7,
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: PreferredSize(
+        appBar: const PreferredSize(
           preferredSize: Size.fromHeight(100),
           child: OrdinaryAppBar(titleOfPage: "Завтрак"),
         ),
         body: Column(
           children: [
-            Container(
+            SizedBox(
               height: 80,
               child: TabBar(
                   isScrollable: true,
@@ -65,8 +65,9 @@ class Breakfast extends StatelessWidget {
             ),
             Expanded(
               child: Consumer<ChooseBreakfast>(
-                builder: (context, restaurant, child) => TabBarView(
-                  children: getFood(restaurant.menuBreakfast)
+                builder: (context, restaurant, child) =>
+                    TabBarView(
+                      children: getFood(restaurant.menuBreakfast)
                 ),
               ),
             )

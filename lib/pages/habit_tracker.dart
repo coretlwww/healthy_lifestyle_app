@@ -114,13 +114,13 @@ class _HabitTrackerState extends State<HabitTracker> {
         centerTitle: true,
         backgroundColor: Colors.white,
         toolbarHeight: 100,
-        title: Center(
-          child: const Text("Трекер привычек",
+        title: const Center(
+          child: Text("Трекер привычек",
               style: TextStyle(
                 fontSize: 30,)),
         ),
-        leading: NewButton(),
-        actions: [StarButton()],
+        leading: const NewButton(),
+        actions: const [StarButton()],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewHabit,
@@ -158,7 +158,7 @@ class _HabitTrackerState extends State<HabitTracker> {
     return ListView.builder(
         itemCount: currentHabits.length,
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           final habit = currentHabits[index];
           bool isCompletedToday = isHabitCompletedToday(habit.completedDays);

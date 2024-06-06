@@ -1,7 +1,5 @@
 import 'package:app/static_components/appbar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -21,17 +19,15 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body:
         Column(children: <Widget> [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                child: const Text("Добро пожаловать!",
-                    style: TextStyle(
-                      fontFamily: 'Open Sans',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                    )),
-              ),
+              Text("Добро пожаловать!",
+                  style: TextStyle(
+                    fontFamily: 'Open Sans',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  )),
             ],
           ),
           Row(

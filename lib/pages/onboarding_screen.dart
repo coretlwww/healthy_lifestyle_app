@@ -25,10 +25,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ],
           ),
           Container(
-            alignment: Alignment(0, 0.5),
+            alignment: const Alignment(0, 0.5),
             child: GestureDetector(
               onTap: () => Navigator.pushNamed(context, '/main'),
-              child: Text("Понятно"),
+              child: const Text("Понятно"),
               ),
             )
         ],

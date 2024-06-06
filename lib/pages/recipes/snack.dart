@@ -51,13 +51,13 @@ class Snack extends StatelessWidget {
       length: 7,
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: PreferredSize(
+        appBar: const PreferredSize(
           preferredSize: Size.fromHeight(100),
           child: OrdinaryAppBar(titleOfPage: "Перекусы"),
         ),
         body: Column(
           children: [
-            Container(
+            SizedBox(
               height: 80,
               child: TabBar(
                   isScrollable: true,

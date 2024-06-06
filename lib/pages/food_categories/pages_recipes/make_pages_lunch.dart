@@ -15,6 +15,7 @@ class MakePagesLunch extends StatefulWidget {
 class _MakePagesState extends State<MakePagesLunch> {
   bool isSelected = false;
 
+  @override
   void initState() {
     super.initState();
     isSelected = _isSelected();
@@ -45,32 +46,49 @@ class _MakePagesState extends State<MakePagesLunch> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100),
-          child: AppBarRecipes(titleOfPage: widget.food.name),
-        ),
-        body: Container(
-          child: Column(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(100),
+        child: AppBarRecipes(titleOfPage: widget.food.name),
+      ),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      if (isSelected) {
-                        removeFromCart();
-                      } else {
-                        addToCart();
-                      }
-                    },
-                    child: isSelected
-                        ? Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
-                        : Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
-                  ),
-                ],
+              GestureDetector(
+                onTap: () {
+                  if (isSelected) {
+                    removeFromCart();
+                  } else {
+                    addToCart();
+                  }
+                },
+                child: isSelected
+                    ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
+                    : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
               ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
               Text(widget.food.description),
             ],
           ),
-        ));
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description2),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description3),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }

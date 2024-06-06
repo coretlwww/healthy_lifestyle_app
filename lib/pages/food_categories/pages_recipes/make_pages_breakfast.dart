@@ -15,6 +15,7 @@ class MakePagesBreakfast extends StatefulWidget {
 class _MakePagesState extends State<MakePagesBreakfast> {
   bool isSelected = false;
 
+  @override
   void initState() {
     super.initState();
     isSelected = _isSelected();
@@ -46,29 +47,48 @@ class _MakePagesState extends State<MakePagesBreakfast> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
+        preferredSize: const Size.fromHeight(100),
         child: AppBarRecipes(titleOfPage: widget.food.name),
       ),
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               GestureDetector(
-                  onTap: () {
-                    if (isSelected) {
-                      removeFromCart();
-                    } else {
-                      addToCart();
-                    }
-                  },
-                  child: isSelected
-                      ? Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
-                      : Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
+                onTap: () {
+                  if (isSelected) {
+                    removeFromCart();
+                  } else {
+                    addToCart();
+                  }
+                },
+                child: isSelected
+                    ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
+                    : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
               ),
             ],
           ),
-          Text(widget.food.description),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description2),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description3),
+            ],
+          ),
         ],
-      ));
+      ),
+    );
   }
 }

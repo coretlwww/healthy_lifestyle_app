@@ -46,30 +46,49 @@ class _MakePagesState extends State<MakePagesDinner> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(100),
-          child: AppBarRecipes(titleOfPage: widget.food.name),
-        ),
-        body: Column(
-          children: [
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    if (isSelected) {
-                      removeFromCart();
-                    } else {
-                      addToCart();
-                    }
-                  },
-                  child: isSelected
-                      ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
-                      : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
-                ),
-              ],
-            ),
-            Text(widget.food.description),
-          ],
-        ));
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(100),
+        child: AppBarRecipes(titleOfPage: widget.food.name),
+      ),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  if (isSelected) {
+                    removeFromCart();
+                  } else {
+                    addToCart();
+                  }
+                },
+                child: isSelected
+                    ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
+                    : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description2),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(widget.food.description3),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
