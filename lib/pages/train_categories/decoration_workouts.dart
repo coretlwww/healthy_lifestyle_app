@@ -20,10 +20,10 @@ class WorkoutDecor extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Container(
+              height: 75,
               color: Colors.grey.shade50,
               child: Row(
                 children: [
-                  Image.asset(train.imagePath, width: 75, height: 75,),
                   Expanded(child: Column(
                     children: [
                       Text(train.name)

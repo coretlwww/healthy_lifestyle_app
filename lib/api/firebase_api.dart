@@ -11,11 +11,7 @@ class FirebaseApi{
     //request permisson from user (will prompt user)
     await _firebaseMessaging.requestPermission();
 
-    //fetch the FCM token for this device
-    final FCMToken = await _firebaseMessaging.getToken();
-
     //print the token (normally you send tis to your server)
-    print('Token: $FCMToken');
     initPushNotifications();
   }
 

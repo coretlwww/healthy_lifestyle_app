@@ -70,6 +70,12 @@ class _MakePagesState extends State<MakePagesDinner> {
             ],
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(widget.food.imagePath, width: 250, height: 250)
+            ],
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(widget.food.description),

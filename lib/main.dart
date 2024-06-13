@@ -9,6 +9,16 @@ import 'package:app/pages/habit_tracker.dart';
 import 'package:app/pages/onboarding_screen.dart';
 import 'package:app/pages/recipes/snack.dart';
 import 'package:app/pages/food_categories/choose_breakfast.dart';
+import 'package:app/pages/train_categories/choose_coordination.dart';
+import 'package:app/pages/train_categories/choose_plyometric.dart';
+import 'package:app/pages/train_categories/choose_power.dart';
+import 'package:app/pages/train_categories/choose_stretching.dart';
+import 'package:app/pages/workouts/cardio.dart';
+import 'package:app/pages/train_categories/choose_cardio.dart';
+import 'package:app/pages/workouts/coordination.dart';
+import 'package:app/pages/workouts/plyometric.dart';
+import 'package:app/pages/workouts/power.dart';
+import 'package:app/pages/workouts/stretching.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:app/pages//main_sc.dart';
@@ -39,12 +49,18 @@ void main() async{
         ChangeNotifierProvider(create: (context) => ChooseLunch()),
         ChangeNotifierProvider(create: (context) => ChooseSnack()),
         ChangeNotifierProvider(create: (context) => ChooseDinner()),
+        ChangeNotifierProvider(create: (context) => ChooseCardio()),
+        ChangeNotifierProvider(create: (context) => ChoosePlyometric()),
+        ChangeNotifierProvider(create: (context) => ChooseStretching()),
+        ChangeNotifierProvider(create: (context) => ChoosePower()),
+        ChangeNotifierProvider(create: (context) => ChooseCoordination()),
       ],
       //navigation
       child: MaterialApp(
         navigatorKey: navigatorKey,
         initialRoute: '/',
         routes: {
+          '/': (context) => const OnBoardingScreen(),
           '/main': (context) => const MainScreen(),
           '/recipe': (context) => const Recipe(),
           '/train': (context) => const Train(),
@@ -55,7 +71,11 @@ void main() async{
           '/fav': (context) => const MainFavorites(),
           '/favRecipe': (context) => const FavoritePageRecipes(),
           '/habitTracker': (context) => const HabitTracker(),
-          '/': (context) => const OnBoardingScreen(),
+          '/cardio': (context) => const Cardio(),
+          '/plyometric': (context) => const Plyometric(),
+          '/stretching': (context) => const Stretching(),
+          '/power': (context) => const Power(),
+          '/coordination': (context) => const Coordination(),
         },
       ),
     ),
