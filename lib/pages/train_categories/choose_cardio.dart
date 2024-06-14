@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 
 class ChooseCardio extends ChangeNotifier{
   final List<Workout> _cardio = [
+    Workout(name: "High knees", description: "", description2: "", description3: ""),
     Workout(name: "Боковые удары", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
-    Workout(name: "...", description: "", description2: "", description3: ""),
+    Workout(name: "Конькобежец", description: "", description2: "", description3: ""),
+    Workout(name: "Армейский прыжок", description: "", description2: "", description3: ""),
+    Workout(name: "Прыжки из приседа", description: "", description2: "", description3: ""),
+    Workout(name: "Выпады с прыжками", description: "", description2: "", description3: ""),
+    Workout(name: "Динамичная планка", description: "", description2: "", description3: ""),
+    Workout(name: "Скалолаз", description: "", description2: "", description3: ""),
+    Workout(name: "Берпи", description: "", description2: "", description3: ""),
+    Workout(name: "Брейк-данс", description: "", description2: "", description3: ""),
   ];
 
   List<Workout> get cardio => _cardio;

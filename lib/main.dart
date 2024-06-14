@@ -1,6 +1,7 @@
 import 'package:app/api/firebase_api.dart';
 import 'package:app/database/habit_db.dart';
 import 'package:app/pages/favorites/favorite_recipes.dart';
+import 'package:app/pages/favorites/favorite_workouts.dart';
 import 'package:app/pages/favorites/favorites_main.dart';
 import 'package:app/pages/food_categories/choose_dinner.dart';
 import 'package:app/pages/food_categories/choose_lunch.dart';
@@ -76,6 +77,7 @@ void main() async{
           '/stretching': (context) => const Stretching(),
           '/power': (context) => const Power(),
           '/coordination': (context) => const Coordination(),
+          '/favWorkout': (context) => const FavoritePageWorkout(),
         },
       ),
     ),

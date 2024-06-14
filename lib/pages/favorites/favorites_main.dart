@@ -15,7 +15,7 @@ class MainFavorites extends StatelessWidget {
       body: Column(
         children: [
           ActualButtons(pagePath: '/favRecipe', imagePath: 'images/to.jpg', name: "Рецепты"),
-          ActualButtons(pagePath: '', imagePath: 'images/to.jpg', name: "Тренировки"),
+          ActualButtons(pagePath: '/favWorkout', imagePath: 'images/to.jpg', name: "Тренировки"),
         ],
       ),
     );

@@ -1,5 +1,7 @@
+import 'package:app/pages/train_categories/categories_trains.dart';
 import 'package:app/pages/train_categories/choose_stretching.dart';
 import 'package:app/pages/train_categories/decoration_workouts.dart';
+import 'package:app/pages/train_categories/pages_workouts/make_pages_stretching.dart';
 import 'package:app/static_components/appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -7,6 +9,11 @@ import 'package:provider/provider.dart';
 class Stretching extends StatelessWidget {
   const Stretching({super.key});
 
+  void navigateToWorkout(BuildContext context, Workout train) {
+    Navigator.push(context, MaterialPageRoute(
+      builder: (context) => MakePagesStretching(train: train),
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +34,7 @@ class Stretching extends StatelessWidget {
                   itemBuilder: (context, index) =>
                       WorkoutDecor(
                           train: stretching[index],
-                          onTap: () {}
+                          onTap: () => navigateToWorkout(context, stretching[index])
                       )
               )
           ),
