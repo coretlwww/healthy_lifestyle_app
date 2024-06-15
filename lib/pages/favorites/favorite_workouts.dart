@@ -11,6 +11,7 @@ import 'package:app/pages/train_categories/pages_workouts/make_pages_plyometric.
 import 'package:app/pages/train_categories/pages_workouts/make_pages_power.dart';
 import 'package:app/pages/train_categories/pages_workouts/make_pages_stretching.dart';
 import 'package:app/static_components/appbar.dart';
+import 'package:app/static_components/appbar_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -51,7 +52,7 @@ class FavoritePageWorkout extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(100),
-        child: OrdinaryAppBar(titleOfPage: "Избранные тренировки"),
+        child: AppBarRecipes(titleOfPage: "Избранные тренировки"),
       ),
       body: CustomScrollView(
         slivers: [

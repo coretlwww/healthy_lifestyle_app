@@ -24,7 +24,7 @@ class ActualButtons extends StatelessWidget {
               Image.asset(imagePath, width: 75, height: 75,),
               Expanded(child: Column(
                 children: [
-                  Text(name)
+                  Text(name, textAlign: TextAlign.center,)
                 ],
               ))
             ],

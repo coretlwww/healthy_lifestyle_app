@@ -20,13 +20,14 @@ class WorkoutDecor extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Container(
+              padding: const EdgeInsets.only(top: 30),
               height: 75,
               color: Colors.grey.shade50,
               child: Row(
                 children: [
                   Expanded(child: Column(
                     children: [
-                      Text(train.name)
+                      Text(train.name, textAlign: TextAlign.center,)
                     ],
                   ))
                 ],

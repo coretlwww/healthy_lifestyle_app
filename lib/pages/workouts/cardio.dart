@@ -1,4 +1,3 @@
-import 'package:app/main.dart';
 import 'package:app/pages/train_categories/categories_trains.dart';
 import 'package:app/pages/train_categories/choose_cardio.dart';
 import 'package:app/pages/train_categories/decoration_workouts.dart';

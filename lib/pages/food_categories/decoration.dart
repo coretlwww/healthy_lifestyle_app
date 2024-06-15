@@ -26,7 +26,7 @@ class FoodDecor extends StatelessWidget {
                   Image.asset(food.imagePath, width: 75, height: 75,),
                   Expanded(child: Column(
                     children: [
-                      Text(food.name)
+                      Text(food.name, textAlign: TextAlign.center,)
                     ],
                   ))
                 ],

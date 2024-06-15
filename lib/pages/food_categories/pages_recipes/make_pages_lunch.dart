@@ -50,50 +50,67 @@ class _MakePagesState extends State<MakePagesLunch> {
         preferredSize: const Size.fromHeight(100),
         child: AppBarRecipes(titleOfPage: widget.food.name),
       ),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  if (isSelected) {
-                    removeFromCart();
-                  } else {
-                    addToCart();
-                  }
-                },
-                child: isSelected
-                    ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
-                    : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
-              ),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    if (isSelected) {
+                      removeFromCart();
+                    } else {
+                      addToCart();
+                    }
+                  },
+                  child: isSelected
+                      ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber)
+                      : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber),
+                ),
+              ],
+            ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(widget.food.imagePath, width: 250, height: 250)
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(widget.food.description),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(widget.food.description2),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(widget.food.description3),
-            ],
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Text(widget.food.description),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Text(widget.food.description2),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Text(widget.food.description3),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

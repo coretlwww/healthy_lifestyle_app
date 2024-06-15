@@ -24,7 +24,7 @@ class Plyometric extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(100),
-        child: OrdinaryAppBar(titleOfPage: "Плиометрические"),
+        child: OrdinaryAppBar(titleOfPage: "Плиометрика"),
       ),
       body: Column(
         children: [

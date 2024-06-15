@@ -55,7 +55,7 @@ class Dinner extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(100),
-          child: OrdinaryAppBar(titleOfPage: "Перекусы"),
+          child: OrdinaryAppBar(titleOfPage: "Ужин"),
         ),
         body: Column(
           children: [
