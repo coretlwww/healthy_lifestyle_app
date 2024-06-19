@@ -18,10 +18,10 @@ class Recipe extends StatelessWidget {
           Center(
             child: Column(
               children: <Widget>[
-                ActualButtons(name: "Завтрак", pagePath: '/breakfast', imagePath: 'images/to.jpg'),
-                ActualButtons(name: "Обед", pagePath: '/lunch', imagePath: 'images/to.jpg'),
-                ActualButtons(name: "Перекус", pagePath: '/snack', imagePath: 'images/to.jpg'),
-                ActualButtons(name: "Ужин", pagePath: '/dinner', imagePath: 'images/to.jpg'),
+                ActualButtons(name: "Завтрак", pagePath: '/breakfast', imagePath: 'images/breakfast.jpg'),
+                ActualButtons(name: "Обед", pagePath: '/lunch', imagePath: 'images/lunch.jpg'),
+                ActualButtons(name: "Перекус", pagePath: '/snack', imagePath: 'images/snack.jpg'),
+                ActualButtons(name: "Ужин", pagePath: '/dinner', imagePath: 'images/dinner.jpg'),
               ],
             ),
           ),

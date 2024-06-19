@@ -50,44 +50,39 @@ class _MakePagesState extends State<MakePagesCardio> {
         preferredSize: const Size.fromHeight(100),
         child: AppBarRecipes(titleOfPage: widget.train.name),
       ),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  if (isSelected) {
-                    removeFromCart();
-                  } else {
-                    addToCart();
-                  }
-                },
-                child: isSelected
-                    ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
-                    : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    if (isSelected) {
+                      removeFromCart();
+                    } else {
+                      addToCart();
+                    }
+                  },
+                  child: isSelected
+                      ? const Icon(Icons.star_rounded, size: 50, color: Colors.amber,)
+                      : const Icon(Icons.star_border_rounded, size: 50, color: Colors.amber,),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Flexible(
+                    child: Text(widget.train.description),
+                  ),
+                ],
               ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(widget.train.description),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(widget.train.description2),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(widget.train.description3),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

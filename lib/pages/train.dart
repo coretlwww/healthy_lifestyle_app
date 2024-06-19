@@ -16,11 +16,11 @@ class Train extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            ActualButtons(pagePath: '/cardio', imagePath: 'images/to.jpg', name: "Кардио тренировки"),
-            ActualButtons(pagePath: '/plyometric', imagePath: 'images/to.jpg', name: "Плиометрические упражнения"),
-            ActualButtons(pagePath: '/stretching', imagePath: 'images/to.jpg', name: "Растяжка"),
-            ActualButtons(pagePath: '/power', imagePath: 'images/to.jpg', name: "Силовые тренировки"),
-            ActualButtons(pagePath: '/coordination', imagePath: 'images/to.jpg', name: "Упражнения для тренировки равновесия и координации движений"),
+            ActualButtons(pagePath: '/cardio', imagePath: 'images/cardio.jpg', name: "Кардио упражнения"),
+            ActualButtons(pagePath: '/plyometric', imagePath: 'images/plyometric.jpg', name: "Плиометрические упражнения"),
+            ActualButtons(pagePath: '/stretching', imagePath: 'images/stretching.jpg', name: "Растяжка"),
+            ActualButtons(pagePath: '/power', imagePath: 'images/power.jpg', name: "Силовые упражнения"),
+            ActualButtons(pagePath: '/coordination', imagePath: 'images/coordination.jpg', name: "Упражнения для тренировки равновесия и координации движений"),
           ],
         ),
       ),

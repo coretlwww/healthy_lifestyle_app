@@ -10,7 +10,6 @@ import 'package:app/pages/train_categories/pages_workouts/make_pages_coordinatio
 import 'package:app/pages/train_categories/pages_workouts/make_pages_plyometric.dart';
 import 'package:app/pages/train_categories/pages_workouts/make_pages_power.dart';
 import 'package:app/pages/train_categories/pages_workouts/make_pages_stretching.dart';
-import 'package:app/static_components/appbar.dart';
 import 'package:app/static_components/appbar_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

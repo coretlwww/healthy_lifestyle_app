@@ -3,7 +3,6 @@ import 'package:app/pages/food_categories/decoration.dart';
 import 'package:app/static_components/appbar.dart';
 import 'package:app/pages/food_categories/categories_recipes.dart';
 import 'package:app/pages/food_categories/choose_breakfast.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

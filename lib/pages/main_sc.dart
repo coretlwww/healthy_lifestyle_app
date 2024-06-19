@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body:
         Container(
-          padding: EdgeInsets.only(left: 15),
+          padding: const EdgeInsets.only(left: 15),
           child: Column(children: <Widget> [
             const Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -32,55 +32,56 @@ class _MainScreenState extends State<MainScreen> {
                     )),
               ],
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  child: const Text("Хорошего дня!",
-                      style: TextStyle(
-                        fontFamily: 'Open Sans',
-                        fontSize: 20,
-                      )),
-                ),
+                Text("Хорошего дня!",
+                    style: TextStyle(
+                      fontFamily: 'Open Sans',
+                      fontSize: 20,
+                    )),
               ],
             ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/recipe'),
-                    child: Container(
-                      padding: const EdgeInsets.only(top: 15),
-                        width: 150,
-                        height: 150,
-                        child: Image.asset('images/to.jpg',)),
-                  ),
-                  const Text("Рецепты", style: TextStyle(
-                    fontSize: 18,
-                  ),),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/train'),
-                    child: Container(
-                      padding: const EdgeInsets.only(top: 15),
-                        width: 150,
-                        height: 150,
-                        child: Image.asset('images/to.jpg')),
-                  ),
-                  const Text("Тренировки", style: TextStyle(
-                    fontSize: 18,
-                  ),),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/habitTracker'),
-                    child: Container(
+              Container(
+                padding: const EdgeInsets.only(top: 25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/recipe'),
+                      child: Container(
                         padding: const EdgeInsets.only(top: 15),
-                        width: 150,
-                        height: 150,
-                        child: Image.asset('images/to.jpg')),
-                  ),
-                  const Text("Трекер привычек", style: TextStyle(
-                    fontSize: 18,
-                  ),)
-                ],
+                          width: 150,
+                          height: 150,
+                          child: Image.asset('images/food.jpg',)),
+                    ),
+                    const Text("Рецепты", style: TextStyle(
+                      fontSize: 18,
+                    ),),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/train'),
+                      child: Container(
+                        padding: const EdgeInsets.only(top: 15),
+                          width: 150,
+                          height: 150,
+                          child: Image.asset('images/workouts.jpg')),
+                    ),
+                    const Text("Тренировки", style: TextStyle(
+                      fontSize: 18,
+                    ),),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/habitTracker'),
+                      child: Container(
+                          padding: const EdgeInsets.only(top: 15),
+                          width: 150,
+                          height: 150,
+                          child: Image.asset('images/tracker.jpg')),
+                    ),
+                    const Text("Трекер привычек", style: TextStyle(
+                      fontSize: 18,
+                    ),)
+                  ],
+                ),
               ),
           ]),
         ),

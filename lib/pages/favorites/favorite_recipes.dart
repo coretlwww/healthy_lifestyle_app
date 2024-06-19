@@ -7,7 +7,6 @@ import 'package:app/pages/food_categories/decoration.dart';
 import 'package:app/pages/food_categories/pages_recipes/make_pages_dinner.dart';
 import 'package:app/pages/food_categories/pages_recipes/make_pages_lunch.dart';
 import 'package:app/pages/food_categories/pages_recipes/make_pages_snack.dart';
-import 'package:app/static_components/appbar.dart';
 import 'package:app/static_components/appbar_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
